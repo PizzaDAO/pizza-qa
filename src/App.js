@@ -10,10 +10,17 @@ function App() {
   const [ description, setDescription ] = useState('');
 
   useEffect(() => {
-    // initial fetch here
-  }, [image])
+    // initial fetch - replace with finished fetchData
+    fetchData()
+  }, [])
 
-  const setData = () => {
+  const fetchData = async () => {
+    // const data = await {} 
+    // setData(data);
+    setTimeout(() => setData(), 2000);
+  }
+
+  const setData = (data) => {
     setImage(logo)
     setDna('name')
     setProbability('45%')
@@ -27,11 +34,10 @@ function App() {
     setDescription('loading...')
   }
 
-  const vote = (voteBool) => {
+  const vote = async (voteBool) => {
     console.log("VOTE", voteBool)
     clearData()
-    // replace with fetch 
-    setTimeout(() => setData(), 2000);
+    fetchData()
   }
 
   return (
