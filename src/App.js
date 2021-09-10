@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+import logo from './pizza.png';
 import './App.css';
 import { useEffect, useState } from 'react'
 
 function App() {
 
-  const [ image, setImage ] = useState();
+  const [ image, setImage ] = useState(logo);
   const [ dna, setDna ] = useState('');
   const [ probability, setProbability ] = useState('');
   const [ description, setDescription ] = useState('');
@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App" style={{display:'flex', justifyContent: 'center', width:'100vw'}}>
       <header className="Pizza-QA">
-        <div style={{maxWidth:'300px', minHeight:'300px', marginTop: '70px'}}>
+        <div style={{maxWidth:'300px', minHeight:'300px', marginTop: '50px'}}>
 
           <div style={{textAlign:'left', fontStyle: 'bold'}}>
             <p style={{fontSize: '40px'}} >Pizza QA</p>
